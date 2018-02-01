@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+  background-color: rgba(134,255,156,.5);
+  padding: 50px;
+  margin-bottom: 15px;
+  border-radius: 55px;
+}
+
+.App .theList {
+  list-style: none;
+  padding-left: 0;
+  width: 250px;
+   display:inline-block;
+
+}
+.App .theList ul{
+  list-style-type: none;
+}
+.App .theList ul{
+  color: #333;
+ background-color: rgba(255,255,255,.5);
+ padding: 15px;
+ margin-bottom: 15px;
+ border-radius: 5px;
+}
+.App .theList button{
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  margin-right: 0px;
+  border-radius: 10px;
+  background-color: #42f4d7;
+  color: #FFF;
+  border: 2px solid #42f4d7;
+}
+.App .strange{
+  list-style: none;
+  padding-left: 0;
+  width: 250px;
+  display:inline-block;
+}
+.App .strange ul{
+  list-style-type: none;
+}
+.App .strange li{
+  color: #333;
+ background-color: rgba(222,255,255,.5);
+ padding: 15px;
+ margin-bottom: 15px;
+ border-radius: 5px;
+}
+
+.App  input {
+  margin:5px;
+  height: 40px;
+  font-size: 16px;
+  border: 2px solid #FFF;
+  width: 250px;
+}
+.App  button{
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  width:100px;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #42f4d7;
+  color: #FFF;
+  border: 2px solid #42f4d7;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
