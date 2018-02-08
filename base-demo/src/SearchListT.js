@@ -6,7 +6,7 @@ class SearchListT extends Component{
  }
 
  create(item){
-   return <li key={item.key}>{item.term} </li>
+   return <div  class="card mb-4 box-shadow" >   <div class="card-body"><li class="list-group-item" key={item.key}>{item.term},{item.priority} </li></div></div>
  }
   render(){
     var Sr = this.props.entries;

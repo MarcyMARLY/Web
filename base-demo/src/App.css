@@ -21,8 +21,22 @@
 .App-intro {
   font-size: large;
 }
+.TodoList .Lists {
+  flex-wrap: nowrap;
+}
+.ContactList .Forms {
+  display: flex;
+  flex-direction: row-reverse;
+}
 .bfb{
 
+}
+.Home .Test1{
+
+}
+.Items .TodoItem{
+  display: flex;
+  flex-wrap: nowrap;
 }
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

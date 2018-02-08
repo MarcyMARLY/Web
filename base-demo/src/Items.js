@@ -49,7 +49,7 @@ class Items extends Component{
          <input
            onKeyDown = {this.termChange}
            type="text"
-           className="form-control"
+
            ref={ `title_${ item.key }` }
            name="title"
            defaultValue={ item.term }
@@ -59,7 +59,7 @@ class Items extends Component{
             <input
               onKeyDown = {this.priorityChange}
               type="text"
-              className="form-control"
+
               ref={ `phone_${ item.key }` }
               name="phone"
               defaultValue={ item.priority }
@@ -72,7 +72,7 @@ class Items extends Component{
 
       </li>;
     }else{
-      return <div  class="card mb-4 box-shadow" onClick = {this.toggleEditing.bind(null, item.key)}>   <div class="card-body"><li class="list-group-item" key={item.key}>{item.term},{item.priority} <button class="btn btn-sm btn-outline-secondary" onClick ={()=> this.props.complete(item.key)}>complete</button><button class="btn btn-sm btn-outline-secondary" onClick ={()=> this.props.delete(item.key)}>del</button></li></div></div>
+      return <div onClick = {this.toggleEditing.bind(null, item.key)}>   <div class="card-body"><li class="list-group-item" key={item.key}>{item.term},{item.priority} <button class="btn btn-sm btn-outline-secondary" onClick ={()=> this.props.complete(item.key)}>complete</button><button class="btn btn-sm btn-outline-secondary" onClick ={()=> this.props.delete(item.key)}>del</button></li></div></div>
     }
 
   }
@@ -81,7 +81,8 @@ class Items extends Component{
 
     var listEn = itemEntries.map(this.createTask);
     return(
-      <div class="col-md-4">
+
+      <div class="TodoItem">
       <ul>{listEn}</ul>
       </div>
 

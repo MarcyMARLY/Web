@@ -98,29 +98,32 @@ class ContactList extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <h3>ContactList</h3>
+      <div className="ContactList">
+        <h3>Contact List</h3>
 
         <div className = "Forms">
 
           <form onSubmit = {this.onNameSubmit} class="col-md-6 mb-3">
-          <div class="form-label-group"class="col-md-4 mb-3">
-            <input value = {this.state.name} onChange = {this.nameChange} placeHolder=" Name"/>
+          <label>Parameters</label>
+          <div class="col-md-10 mb-3">
+            <input  class = "form-control"value = {this.state.name} onChange = {this.nameChange} placeHolder=" Name"/>
             </div>
-            <div class="form-label-group" class="col-md-4 mb-3">
-            <input value = {this.state.phone} onChange = {this.phoneChange} placeHolder=" Phone"/>
+            <div class="form-label-group" class="col-md-10 mb-3">
+            <input  class = "form-control"value = {this.state.phone} onChange = {this.phoneChange} placeHolder=" Phone"/>
               </div>
-              <div class="form-label-group" class="col-md-4 mb-3">
-            <input value = {this.state.img} onChange = {this.imgChange} placeHolder=" Image"/>
+            <div class="form-label-group" class="col-md-10 mb-3">
+            <input class = "form-control" value = {this.state.img} onChange = {this.imgChange} placeHolder=" Image"/>
             </div>
 
-
+          <div class="form-label-group" class="col-md-10 mb-3">
             <button class="btn btn-lg btn-primary btn-block" type = "submit">Submit</button>
+            </div>
           </form>
-          <form onSubmit = {this.onSearhSubmit} class="col-md-6 mb-3">
-            <div class="form-label-group" class="col-md-4 mb-3">
-              <input value = {this.state.search} onChange = {this.onSearchChange} placeHolder=" Search"/>
-    
+          <form onSubmit = {this.onSearhSubmit} >
+            <label>Search</label>
+            <div class="form-label-group" class="col-md-10 mb-3">
+              <input class = "form-control" value = {this.state.search} onChange = {this.onSearchChange} placeHolder=" Search"/>
+
             </div>
 
           </form>

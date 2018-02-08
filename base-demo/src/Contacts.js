@@ -88,7 +88,7 @@ class Contacts extends Component {
 
       </li>;
     }else{
-      return(<div class="card mb-4 box-shadow" onClick = {this.toggleEditing.bind(null, item.key)}><div class="card-body"><li  class="list-group-item" key = {item.key}> {item.name} <button class="btn btn-sm btn-outline-secondary" onClick = {() => this.props.delete(item.key)}>del</button></li></div></div>)
+      return(<div class="card mb-4 box-shadow" onClick = {this.toggleEditing.bind(null, item.key)}><div class = "row"><img src = {item.img} width = "50px" heigth="30px"/><li  class="list-group-item" key = {item.key}> {item.name} <button class="btn btn-sm btn-outline-secondary" onClick = {() => this.props.delete(item.key)}>del</button></li></div></div>)
     }
     }
 

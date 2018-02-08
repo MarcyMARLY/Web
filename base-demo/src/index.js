@@ -16,8 +16,38 @@ class Home extends Component{
 
   render(){
     return (
-      <h1 className = "bfb">Home page</h1>);
+      <div class = "Home">
+      <div class = "jumbotron">
+      <h1>Home page</h1>
+      </div>
+      <div class = "container">
+      <SplitPane
+         left={
+           <div class="Test1" >
+           <Contact />
+           </div>
+         }
+         right={
+           <div  class="Test1">
+           <TodoList />
+           </div>
+     } />
+     </div>
+     </div>
+    );
   }
+}
+function SplitPane(props) {
+  return (
+    <div className="SplitPane" class = "row">
+      <div className="SplitPane-left">
+        {props.left}
+      </div>
+      <div className="SplitPane-right">
+        {props.right}
+      </div>
+    </div>
+  );
 }
 ReactDOM.render(
 

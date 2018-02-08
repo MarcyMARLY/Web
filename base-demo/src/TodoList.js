@@ -126,9 +126,9 @@ class TodoList extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div class="TodoList">
 
-        <h3>TODOS</h3>
+        <h3>Todos</h3>
         <div class ="row" >
         <form  class="col-md-6 mb-3" onSubmit = {this.onSubmit}>
         <label for="firstName">Term</label>
@@ -136,7 +136,7 @@ class TodoList extends Component {
         </form>
           <div class="col-md-4 mb-3">
                 <label for="state">Priority</label>
-                <select class="custom-select d-block w-100" id="priority" required="">
+                <select class="custom-select d-block w-100" id="priority">
                   <option value="" onClick = {this.HighHandler}>High</option>
                   <option onClick = {this.MediumHandler}>Medium</option>
                   <option onClick = {this.LowHandler}>Low</option>
@@ -144,19 +144,24 @@ class TodoList extends Component {
                 <div class="invalid-feedback">
                   Please provide a valid state.
                 </div>
-              </div>
+          </div>
 
         </div>
+          <div class ="row" >
         <form onSubmit = {this.onS} class="col-md-6 mb-3">
         <label for="firstName">Search</label>
         <input class = "form-control" value= {this.state.search} onChange = {this.onC} />
         </form>
-        <Items entries = {this.state.items} delete={this.deleteItem} handleUpdate = {this.handleUpdate} complete = {this.complete}/>
-        <ItemsS entries = {this.state.searchItems}/>
-        <label for="complete">CompeteList</label>
-        <ul>
-            {this.getList()}
-        </ul>
+        </div>
+        <div class = "Lists">
+          <Items entries = {this.state.items} delete={this.deleteItem} handleUpdate = {this.handleUpdate} complete = {this.complete}/>
+          <ItemsS entries = {this.state.searchItems}/>
+          <label for="complete">CompeteList</label>
+          <ul>
+              {this.getList()}
+          </ul>
+        </div>
+
       </div>
     );
   }
